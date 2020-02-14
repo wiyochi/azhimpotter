@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container">
+<h1>Tu es un sorcier {{sorcier}}</h1>
+<h2> Tu as {{totalPoint}} point de compétence(s) à répartir !</h2>
+
+
+<div class="qty mt-5">
+  <h2> Intelligence </h2>
+  <span class="minus bg-dark" (click)="onDecrement(0)">-</span>
+  <input type="number" class="count" name="qty" value={{competences[0]}}>
+  <span class="plus bg-dark" (click)="onIncrement(0)">+</span>
+</div>
+
+<div class="qty mt-5">
+  <h2> Force </h2>
+  <span class="minus bg-dark" (click)="onDecrement(1)">-</span>
+  <input type="number" class="count" name="qty" value={{competences[1]}}>
+  <span class="plus bg-dark" (click)="onIncrement(1)">+</span>
+</div>
+
+<div class="qty mt-5">
+  <h2> Savoir </h2>
+  <span class="minus bg-dark" (click)="onDecrement(2)">-</span>
+  <input type="number" class="count" name="qty" value={{competences[2]}}>
+  <span class="plus bg-dark" (click)="onIncrement(2)">+</span>
+</div>
+
+<div class="qty mt-5">
+  <h2> Vitesse </h2>
+  <span class="minus bg-dark" (click)="onDecrement(3)">-</span>
+  <input type="number" class="count" name="qty" value={{competences[3]}}>
+  <span class="plus bg-dark" (click)="onIncrement(3)">+</span>
+</div>
+
+
+<br>
+<div align='center'>
+  <img [alt]="bookName" [src]="bookPictureUrl">
+</div>
+
+<p> Dommage tu es marocain ! </p>
+
+<button (click)="big()" [style.font-size.em]="isImportant?2:1">Big</button>
+
+<button type="button" 
+(click)="buy()">BUY</button>
+<div (drop)="onDrop($event)">BUY</div>
+
+
+
+</div>
+
+
+
